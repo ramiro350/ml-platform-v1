@@ -114,12 +114,12 @@ input_data: Os dados de entrada para a predição (uma lista de listas, onde cad
          "predictions": [0, 2]
        }
    
-## Contexto da Predição:
+## Contexto da Predição
 O modelo treinado é um classificador que tenta prever categorias ou classes do dataset Iris. 
 
 O dataset Iris, possui três classes de flores (representadas pelos valores 0, 1, e 2), o resultado da predição [0, 2] indica que o modelo classificou o primeiro conjunto de dados de entrada na classe 0 e o segundo na classe 2.
 
-### Classes do Dataset:
+### Classes do Dataset
 
 #### As classes podem ser as seguintes:
     0: Iris-setosa
@@ -136,7 +136,7 @@ http://localhost:5001/swagger-ui/
 
 Lá, você poderá testar os endpoints diretamente na interface.
 
-## Arquitetura AWS
+## Proposta de Arquitetura AWS
 
                 +-----------------------------------------------+
                 |                Usuário (Cliente)              |
