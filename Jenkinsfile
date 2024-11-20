@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                git branch: 'main', url: 'git@github.com:ramiro350/jenkins-nodejs.git'
+                git branch: 'main', url: 'https://github.com/ramiro350/ml-platform-v1.git'
                 sh 'docker build -t ml-predict-api .'
 
             }
