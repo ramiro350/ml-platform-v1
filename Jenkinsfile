@@ -5,16 +5,25 @@ pipeline {
         // REPO_URL = 'https://github.com/antonio-marcos1989/ml-platform-v1.git'
     }
     stages {
+        stage('Build') {
+            steps {
+                // Get some code from a GitHub repository
+                git branch: 'main', url: 'git@github.com:ramiro350/jenkins-nodejs.git'
+                sh 'docker build -t ml-predict-api .'
+
+            }
+
+        }
         // stage('Clone Repository') {
         //     steps {
         //         git branch: 'main', url: "${REPO_URL}"
         //     }
         // }
-        stage('Build Docker Image') {
-            steps {
-                sh "docker build -t ${DOCKER_IMAGE} ."
-            }
-        }
+        // stage('Build Docker Image') {
+        //     steps {
+        //         sh "docker build -t ${DOCKER_IMAGE} ."
+        //     }
+        // }
         stage('Run Docker Container') {
             steps {
                 sh "docker run -d -p 5001:5001 ${DOCKER_IMAGE}"
